@@ -1,0 +1,1247 @@
+{
+  "timestamp": "2025-07-30T11:48:00.187Z",
+  "projectStructure": {
+    "client": [
+      {
+        "type": "directory",
+        "name": "src",
+        "path": "client/src",
+        "children": [
+          {
+            "type": "file",
+            "name": "App.tsx",
+            "path": "client/src/App.tsx",
+            "size": 3457
+          },
+          {
+            "type": "directory",
+            "name": "components",
+            "path": "client/src/components",
+            "children": [
+              {
+                "type": "file",
+                "name": "AdminNav.tsx",
+                "path": "client/src/components/AdminNav.tsx",
+                "size": 1932
+              },
+              {
+                "type": "file",
+                "name": "DeliveryNotes.tsx",
+                "path": "client/src/components/DeliveryNotes.tsx",
+                "size": 1904
+              },
+              {
+                "type": "file",
+                "name": "DepartmentCard.tsx",
+                "path": "client/src/components/DepartmentCard.tsx",
+                "size": 1401
+              },
+              {
+                "type": "file",
+                "name": "FloatingOrbs.tsx",
+                "path": "client/src/components/FloatingOrbs.tsx",
+                "size": 201
+              },
+              {
+                "type": "file",
+                "name": "Header.tsx",
+                "path": "client/src/components/Header.tsx",
+                "size": 1303
+              },
+              {
+                "type": "file",
+                "name": "JobDetailsModal.tsx",
+                "path": "client/src/components/JobDetailsModal.tsx",
+                "size": 13934
+              },
+              {
+                "type": "file",
+                "name": "LazyImage.tsx",
+                "path": "client/src/components/LazyImage.tsx",
+                "size": 1885
+              },
+              {
+                "type": "file",
+                "name": "PhotoCompletionDialog.tsx",
+                "path": "client/src/components/PhotoCompletionDialog.tsx",
+                "size": 9090
+              },
+              {
+                "type": "file",
+                "name": "QuickActions.tsx",
+                "path": "client/src/components/QuickActions.tsx",
+                "size": 1652
+              },
+              {
+                "type": "file",
+                "name": "SystemStatus.tsx",
+                "path": "client/src/components/SystemStatus.tsx",
+                "size": 1541
+              },
+              {
+                "type": "directory",
+                "name": "ui",
+                "path": "client/src/components/ui",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "accordion.tsx",
+                    "path": "client/src/components/ui/accordion.tsx",
+                    "size": 1977
+                  },
+                  {
+                    "type": "file",
+                    "name": "alert-dialog.tsx",
+                    "path": "client/src/components/ui/alert-dialog.tsx",
+                    "size": 4420
+                  },
+                  {
+                    "type": "file",
+                    "name": "alert.tsx",
+                    "path": "client/src/components/ui/alert.tsx",
+                    "size": 1584
+                  },
+                  {
+                    "type": "file",
+                    "name": "aspect-ratio.tsx",
+                    "path": "client/src/components/ui/aspect-ratio.tsx",
+                    "size": 140
+                  },
+                  {
+                    "type": "file",
+                    "name": "avatar.tsx",
+                    "path": "client/src/components/ui/avatar.tsx",
+                    "size": 1419
+                  },
+                  {
+                    "type": "file",
+                    "name": "badge.tsx",
+                    "path": "client/src/components/ui/badge.tsx",
+                    "size": 1128
+                  },
+                  {
+                    "type": "file",
+                    "name": "breadcrumb.tsx",
+                    "path": "client/src/components/ui/breadcrumb.tsx",
+                    "size": 2712
+                  },
+                  {
+                    "type": "file",
+                    "name": "button.tsx",
+                    "path": "client/src/components/ui/button.tsx",
+                    "size": 1901
+                  },
+                  {
+                    "type": "file",
+                    "name": "calendar.tsx",
+                    "path": "client/src/components/ui/calendar.tsx",
+                    "size": 2695
+                  },
+                  {
+                    "type": "file",
+                    "name": "card.tsx",
+                    "path": "client/src/components/ui/card.tsx",
+                    "size": 1858
+                  },
+                  {
+                    "type": "file",
+                    "name": "carousel.tsx",
+                    "path": "client/src/components/ui/carousel.tsx",
+                    "size": 6210
+                  },
+                  {
+                    "type": "file",
+                    "name": "chart.tsx",
+                    "path": "client/src/components/ui/chart.tsx",
+                    "size": 10481
+                  },
+                  {
+                    "type": "file",
+                    "name": "checkbox.tsx",
+                    "path": "client/src/components/ui/checkbox.tsx",
+                    "size": 1056
+                  },
+                  {
+                    "type": "file",
+                    "name": "collapsible.tsx",
+                    "path": "client/src/components/ui/collapsible.tsx",
+                    "size": 329
+                  },
+                  {
+                    "type": "file",
+                    "name": "command.tsx",
+                    "path": "client/src/components/ui/command.tsx",
+                    "size": 4885
+                  },
+                  {
+                    "type": "file",
+                    "name": "context-menu.tsx",
+                    "path": "client/src/components/ui/context-menu.tsx",
+                    "size": 7428
+                  },
+                  {
+                    "type": "file",
+                    "name": "dialog.tsx",
+                    "path": "client/src/components/ui/dialog.tsx",
+                    "size": 3834
+                  },
+                  {
+                    "type": "file",
+                    "name": "drawer.tsx",
+                    "path": "client/src/components/ui/drawer.tsx",
+                    "size": 3021
+                  },
+                  {
+                    "type": "file",
+                    "name": "dropdown-menu.tsx",
+                    "path": "client/src/components/ui/dropdown-menu.tsx",
+                    "size": 7609
+                  },
+                  {
+                    "type": "file",
+                    "name": "form.tsx",
+                    "path": "client/src/components/ui/form.tsx",
+                    "size": 4120
+                  },
+                  {
+                    "type": "file",
+                    "name": "hover-card.tsx",
+                    "path": "client/src/components/ui/hover-card.tsx",
+                    "size": 1251
+                  },
+                  {
+                    "type": "file",
+                    "name": "input-otp.tsx",
+                    "path": "client/src/components/ui/input-otp.tsx",
+                    "size": 2154
+                  },
+                  {
+                    "type": "file",
+                    "name": "input.tsx",
+                    "path": "client/src/components/ui/input.tsx",
+                    "size": 791
+                  },
+                  {
+                    "type": "file",
+                    "name": "label.tsx",
+                    "path": "client/src/components/ui/label.tsx",
+                    "size": 710
+                  },
+                  {
+                    "type": "file",
+                    "name": "menubar.tsx",
+                    "path": "client/src/components/ui/menubar.tsx",
+                    "size": 8605
+                  },
+                  {
+                    "type": "file",
+                    "name": "navigation-menu.tsx",
+                    "path": "client/src/components/ui/navigation-menu.tsx",
+                    "size": 5128
+                  },
+                  {
+                    "type": "file",
+                    "name": "pagination.tsx",
+                    "path": "client/src/components/ui/pagination.tsx",
+                    "size": 2751
+                  },
+                  {
+                    "type": "file",
+                    "name": "popover.tsx",
+                    "path": "client/src/components/ui/popover.tsx",
+                    "size": 1280
+                  },
+                  {
+                    "type": "file",
+                    "name": "progress.tsx",
+                    "path": "client/src/components/ui/progress.tsx",
+                    "size": 791
+                  },
+                  {
+                    "type": "file",
+                    "name": "radio-group.tsx",
+                    "path": "client/src/components/ui/radio-group.tsx",
+                    "size": 1467
+                  },
+                  {
+                    "type": "file",
+                    "name": "resizable.tsx",
+                    "path": "client/src/components/ui/resizable.tsx",
+                    "size": 1723
+                  },
+                  {
+                    "type": "file",
+                    "name": "scroll-area.tsx",
+                    "path": "client/src/components/ui/scroll-area.tsx",
+                    "size": 1642
+                  },
+                  {
+                    "type": "file",
+                    "name": "select.tsx",
+                    "path": "client/src/components/ui/select.tsx",
+                    "size": 5742
+                  },
+                  {
+                    "type": "file",
+                    "name": "separator.tsx",
+                    "path": "client/src/components/ui/separator.tsx",
+                    "size": 756
+                  },
+                  {
+                    "type": "file",
+                    "name": "sheet.tsx",
+                    "path": "client/src/components/ui/sheet.tsx",
+                    "size": 4281
+                  },
+                  {
+                    "type": "file",
+                    "name": "sidebar.tsx",
+                    "path": "client/src/components/ui/sidebar.tsx",
+                    "size": 23567
+                  },
+                  {
+                    "type": "file",
+                    "name": "skeleton.tsx",
+                    "path": "client/src/components/ui/skeleton.tsx",
+                    "size": 261
+                  },
+                  {
+                    "type": "file",
+                    "name": "slider.tsx",
+                    "path": "client/src/components/ui/slider.tsx",
+                    "size": 1077
+                  },
+                  {
+                    "type": "file",
+                    "name": "switch.tsx",
+                    "path": "client/src/components/ui/switch.tsx",
+                    "size": 1139
+                  },
+                  {
+                    "type": "file",
+                    "name": "table.tsx",
+                    "path": "client/src/components/ui/table.tsx",
+                    "size": 2765
+                  },
+                  {
+                    "type": "file",
+                    "name": "tabs.tsx",
+                    "path": "client/src/components/ui/tabs.tsx",
+                    "size": 1883
+                  },
+                  {
+                    "type": "file",
+                    "name": "textarea.tsx",
+                    "path": "client/src/components/ui/textarea.tsx",
+                    "size": 689
+                  },
+                  {
+                    "type": "file",
+                    "name": "toast.tsx",
+                    "path": "client/src/components/ui/toast.tsx",
+                    "size": 4845
+                  },
+                  {
+                    "type": "file",
+                    "name": "toaster.tsx",
+                    "path": "client/src/components/ui/toaster.tsx",
+                    "size": 772
+                  },
+                  {
+                    "type": "file",
+                    "name": "toggle-group.tsx",
+                    "path": "client/src/components/ui/toggle-group.tsx",
+                    "size": 1753
+                  },
+                  {
+                    "type": "file",
+                    "name": "toggle.tsx",
+                    "path": "client/src/components/ui/toggle.tsx",
+                    "size": 1527
+                  },
+                  {
+                    "type": "file",
+                    "name": "tooltip.tsx",
+                    "path": "client/src/components/ui/tooltip.tsx",
+                    "size": 1209
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "hooks",
+            "path": "client/src/hooks",
+            "children": [
+              {
+                "type": "file",
+                "name": "use-mobile.tsx",
+                "path": "client/src/hooks/use-mobile.tsx",
+                "size": 565
+              },
+              {
+                "type": "file",
+                "name": "use-toast.ts",
+                "path": "client/src/hooks/use-toast.ts",
+                "size": 3895
+              },
+              {
+                "type": "file",
+                "name": "useDebounce.ts",
+                "path": "client/src/hooks/useDebounce.ts",
+                "size": 1273
+              },
+              {
+                "type": "file",
+                "name": "useIntersectionObserver.ts",
+                "path": "client/src/hooks/useIntersectionObserver.ts",
+                "size": 880
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "lib",
+            "path": "client/src/lib",
+            "children": [
+              {
+                "type": "file",
+                "name": "queryClient.ts",
+                "path": "client/src/lib/queryClient.ts",
+                "size": 1383
+              },
+              {
+                "type": "file",
+                "name": "utils.ts",
+                "path": "client/src/lib/utils.ts",
+                "size": 166
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "main.tsx",
+            "path": "client/src/main.tsx",
+            "size": 157
+          },
+          {
+            "type": "directory",
+            "name": "pages",
+            "path": "client/src/pages",
+            "children": [
+              {
+                "type": "directory",
+                "name": "admin",
+                "path": "client/src/pages/admin",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "settings.tsx",
+                    "path": "client/src/pages/admin/settings.tsx",
+                    "size": 17940
+                  },
+                  {
+                    "type": "file",
+                    "name": "users-2050.tsx",
+                    "path": "client/src/pages/admin/users-2050.tsx",
+                    "size": 27072
+                  },
+                  {
+                    "type": "file",
+                    "name": "users.tsx",
+                    "path": "client/src/pages/admin/users.tsx",
+                    "size": 22094
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "application-admin.tsx",
+                "path": "client/src/pages/application-admin.tsx",
+                "size": 15413
+              },
+              {
+                "type": "file",
+                "name": "client-application.tsx",
+                "path": "client/src/pages/client-application.tsx",
+                "size": 27380
+              },
+              {
+                "type": "file",
+                "name": "client-login.tsx",
+                "path": "client/src/pages/client-login.tsx",
+                "size": 5248
+              },
+              {
+                "type": "file",
+                "name": "clients.tsx",
+                "path": "client/src/pages/clients.tsx",
+                "size": 9042
+              },
+              {
+                "type": "file",
+                "name": "fabrication-job-detail.tsx",
+                "path": "client/src/pages/fabrication-job-detail.tsx",
+                "size": 11305
+              },
+              {
+                "type": "file",
+                "name": "fabrication-jobs.tsx",
+                "path": "client/src/pages/fabrication-jobs.tsx",
+                "size": 13048
+              },
+              {
+                "type": "file",
+                "name": "hire-job-detail.tsx",
+                "path": "client/src/pages/hire-job-detail.tsx",
+                "size": 11236
+              },
+              {
+                "type": "file",
+                "name": "hire.tsx",
+                "path": "client/src/pages/hire.tsx",
+                "size": 12226
+              },
+              {
+                "type": "file",
+                "name": "home.tsx",
+                "path": "client/src/pages/home.tsx",
+                "size": 17755
+              },
+              {
+                "type": "file",
+                "name": "les-jobs.tsx",
+                "path": "client/src/pages/les-jobs.tsx",
+                "size": 23455
+              },
+              {
+                "type": "file",
+                "name": "live-jobs.tsx",
+                "path": "client/src/pages/live-jobs.tsx",
+                "size": 15418
+              },
+              {
+                "type": "file",
+                "name": "new-client.tsx",
+                "path": "client/src/pages/new-client.tsx",
+                "size": 27910
+              },
+              {
+                "type": "file",
+                "name": "new-fabrication-job.tsx",
+                "path": "client/src/pages/new-fabrication-job.tsx",
+                "size": 15304
+              },
+              {
+                "type": "file",
+                "name": "new-job.tsx",
+                "path": "client/src/pages/new-job.tsx",
+                "size": 23726
+              },
+              {
+                "type": "file",
+                "name": "new-les-job.tsx",
+                "path": "client/src/pages/new-les-job.tsx",
+                "size": 16614
+              },
+              {
+                "type": "file",
+                "name": "new-sales-job.tsx",
+                "path": "client/src/pages/new-sales-job.tsx",
+                "size": 15214
+              },
+              {
+                "type": "file",
+                "name": "new-testing-job.tsx",
+                "path": "client/src/pages/new-testing-job.tsx",
+                "size": 15282
+              },
+              {
+                "type": "file",
+                "name": "not-found.tsx",
+                "path": "client/src/pages/not-found.tsx",
+                "size": 711
+              },
+              {
+                "type": "file",
+                "name": "performance-dashboard.tsx",
+                "path": "client/src/pages/performance-dashboard.tsx",
+                "size": 18520
+              },
+              {
+                "type": "file",
+                "name": "sales-job-detail.tsx",
+                "path": "client/src/pages/sales-job-detail.tsx",
+                "size": 11251
+              },
+              {
+                "type": "file",
+                "name": "sales-jobs.tsx",
+                "path": "client/src/pages/sales-jobs.tsx",
+                "size": 12979
+              },
+              {
+                "type": "file",
+                "name": "testing-job-detail.tsx",
+                "path": "client/src/pages/testing-job-detail.tsx",
+                "size": 11269
+              },
+              {
+                "type": "file",
+                "name": "testing-jobs.tsx",
+                "path": "client/src/pages/testing-jobs.tsx",
+                "size": 13000
+              },
+              {
+                "type": "file",
+                "name": "transport-job-detail.tsx",
+                "path": "client/src/pages/transport-job-detail.tsx",
+                "size": 11269
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "utils",
+            "path": "client/src/utils",
+            "children": [
+              {
+                "type": "file",
+                "name": "performance.ts",
+                "path": "client/src/utils/performance.ts",
+                "size": 3647
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "server": [
+      {
+        "type": "file",
+        "name": "db.ts",
+        "path": "server/db.ts",
+        "size": 482
+      },
+      {
+        "type": "file",
+        "name": "index.ts",
+        "path": "server/index.ts",
+        "size": 2064
+      },
+      {
+        "type": "file",
+        "name": "routes.ts",
+        "path": "server/routes.ts",
+        "size": 11051
+      },
+      {
+        "type": "file",
+        "name": "storage.ts",
+        "path": "server/storage.ts",
+        "size": 18636
+      },
+      {
+        "type": "file",
+        "name": "vite.ts",
+        "path": "server/vite.ts",
+        "size": 2263
+      }
+    ],
+    "shared": [
+      {
+        "type": "file",
+        "name": "schema.ts",
+        "path": "shared/schema.ts",
+        "size": 8333
+      }
+    ]
+  },
+  "routes": [],
+  "components": [
+    {
+      "name": "AdminNav",
+      "path": "client/src/components/AdminNav.tsx",
+      "category": "components"
+    },
+    {
+      "name": "DeliveryNotes",
+      "path": "client/src/components/DeliveryNotes.tsx",
+      "category": "components"
+    },
+    {
+      "name": "DepartmentCard",
+      "path": "client/src/components/DepartmentCard.tsx",
+      "category": "components"
+    },
+    {
+      "name": "FloatingOrbs",
+      "path": "client/src/components/FloatingOrbs.tsx",
+      "category": "components"
+    },
+    {
+      "name": "Header",
+      "path": "client/src/components/Header.tsx",
+      "category": "components"
+    },
+    {
+      "name": "JobDetailsModal",
+      "path": "client/src/components/JobDetailsModal.tsx",
+      "category": "components"
+    },
+    {
+      "name": "LazyImage",
+      "path": "client/src/components/LazyImage.tsx",
+      "category": "components"
+    },
+    {
+      "name": "PhotoCompletionDialog",
+      "path": "client/src/components/PhotoCompletionDialog.tsx",
+      "category": "components"
+    },
+    {
+      "name": "QuickActions",
+      "path": "client/src/components/QuickActions.tsx",
+      "category": "components"
+    },
+    {
+      "name": "SystemStatus",
+      "path": "client/src/components/SystemStatus.tsx",
+      "category": "components"
+    },
+    {
+      "name": "accordion",
+      "path": "client/src/components/ui/accordion.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "alert-dialog",
+      "path": "client/src/components/ui/alert-dialog.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "alert",
+      "path": "client/src/components/ui/alert.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "aspect-ratio",
+      "path": "client/src/components/ui/aspect-ratio.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "avatar",
+      "path": "client/src/components/ui/avatar.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "badge",
+      "path": "client/src/components/ui/badge.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "breadcrumb",
+      "path": "client/src/components/ui/breadcrumb.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "button",
+      "path": "client/src/components/ui/button.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "calendar",
+      "path": "client/src/components/ui/calendar.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "card",
+      "path": "client/src/components/ui/card.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "carousel",
+      "path": "client/src/components/ui/carousel.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "chart",
+      "path": "client/src/components/ui/chart.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "checkbox",
+      "path": "client/src/components/ui/checkbox.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "collapsible",
+      "path": "client/src/components/ui/collapsible.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "command",
+      "path": "client/src/components/ui/command.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "context-menu",
+      "path": "client/src/components/ui/context-menu.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "dialog",
+      "path": "client/src/components/ui/dialog.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "drawer",
+      "path": "client/src/components/ui/drawer.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "dropdown-menu",
+      "path": "client/src/components/ui/dropdown-menu.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "form",
+      "path": "client/src/components/ui/form.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "hover-card",
+      "path": "client/src/components/ui/hover-card.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "input-otp",
+      "path": "client/src/components/ui/input-otp.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "input",
+      "path": "client/src/components/ui/input.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "label",
+      "path": "client/src/components/ui/label.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "menubar",
+      "path": "client/src/components/ui/menubar.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "navigation-menu",
+      "path": "client/src/components/ui/navigation-menu.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "pagination",
+      "path": "client/src/components/ui/pagination.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "popover",
+      "path": "client/src/components/ui/popover.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "progress",
+      "path": "client/src/components/ui/progress.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "radio-group",
+      "path": "client/src/components/ui/radio-group.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "resizable",
+      "path": "client/src/components/ui/resizable.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "scroll-area",
+      "path": "client/src/components/ui/scroll-area.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "select",
+      "path": "client/src/components/ui/select.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "separator",
+      "path": "client/src/components/ui/separator.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "sheet",
+      "path": "client/src/components/ui/sheet.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "sidebar",
+      "path": "client/src/components/ui/sidebar.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "skeleton",
+      "path": "client/src/components/ui/skeleton.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "slider",
+      "path": "client/src/components/ui/slider.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "switch",
+      "path": "client/src/components/ui/switch.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "table",
+      "path": "client/src/components/ui/table.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "tabs",
+      "path": "client/src/components/ui/tabs.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "textarea",
+      "path": "client/src/components/ui/textarea.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "toast",
+      "path": "client/src/components/ui/toast.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "toaster",
+      "path": "client/src/components/ui/toaster.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "toggle-group",
+      "path": "client/src/components/ui/toggle-group.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "toggle",
+      "path": "client/src/components/ui/toggle.tsx",
+      "category": "ui"
+    },
+    {
+      "name": "tooltip",
+      "path": "client/src/components/ui/tooltip.tsx",
+      "category": "ui"
+    }
+  ],
+  "pages": [
+    {
+      "file": "application-admin.tsx",
+      "component": "ApplicationAdmin",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "client-application.tsx",
+      "component": "ClientApplication",
+      "features": {
+        "hasForm": false,
+        "hasQuery": false,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "client-login.tsx",
+      "component": "ClientLogin",
+      "features": {
+        "hasForm": false,
+        "hasQuery": false,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "clients.tsx",
+      "component": "Clients",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "fabrication-job-detail.tsx",
+      "component": "FabricationJobDetail",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "fabrication-jobs.tsx",
+      "component": "FabricationJobs",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "hire-job-detail.tsx",
+      "component": "HireJobDetail",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "hire.tsx",
+      "component": "Hire",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "home.tsx",
+      "component": "Home",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "les-jobs.tsx",
+      "component": "LESJobs",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "live-jobs.tsx",
+      "component": "LiveJobs",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-client.tsx",
+      "component": "NewClient",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-fabrication-job.tsx",
+      "component": "NewFabricationJob",
+      "features": {
+        "hasForm": true,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-job.tsx",
+      "component": "NewJob",
+      "features": {
+        "hasForm": true,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-les-job.tsx",
+      "component": "NewLESJob",
+      "features": {
+        "hasForm": true,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-sales-job.tsx",
+      "component": "NewSalesJob",
+      "features": {
+        "hasForm": true,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "new-testing-job.tsx",
+      "component": "NewTestingJob",
+      "features": {
+        "hasForm": true,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "not-found.tsx",
+      "component": "NotFound",
+      "features": {
+        "hasForm": false,
+        "hasQuery": false,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "performance-dashboard.tsx",
+      "component": "PerformanceDashboard",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": true
+      }
+    },
+    {
+      "file": "sales-job-detail.tsx",
+      "component": "SalesJobDetail",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "sales-jobs.tsx",
+      "component": "SalesJobs",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "testing-job-detail.tsx",
+      "component": "TestingJobDetail",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "testing-jobs.tsx",
+      "component": "TestingJobs",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": true,
+        "hasCharts": false
+      }
+    },
+    {
+      "file": "transport-job-detail.tsx",
+      "component": "TransportJobDetail",
+      "features": {
+        "hasForm": false,
+        "hasQuery": true,
+        "hasMutation": false,
+        "hasCharts": false
+      }
+    }
+  ],
+  "schemas": {
+    "tables": [
+      {
+        "variable": "users",
+        "table": "users"
+      },
+      {
+        "variable": "clients",
+        "table": "clients"
+      },
+      {
+        "variable": "jobCounter",
+        "table": "job_counter"
+      },
+      {
+        "variable": "jobs",
+        "table": "jobs"
+      },
+      {
+        "variable": "jobItems",
+        "table": "job_items"
+      },
+      {
+        "variable": "adminSettings",
+        "table": "admin_settings"
+      }
+    ],
+    "types": [
+      "InsertUser",
+      "User",
+      "AdminSettings",
+      "InsertAdminSettings",
+      "Client",
+      "InsertClient",
+      "Job",
+      "InsertJob",
+      "JobItem",
+      "InsertJobItem",
+      "JobCounter",
+      "InsertJobCounter"
+    ]
+  },
+  "apiEndpoints": [],
+  "summary": {
+    "totalRoutes": 0,
+    "totalPages": 24,
+    "totalTables": 6,
+    "totalComponents": 57,
+    "features": {
+      "hasPerformanceDashboard": true,
+      "hasJobManagement": true,
+      "hasClientManagement": true,
+      "hasAdminPanel": true,
+      "hasCharts": true
+    }
+  }
+}

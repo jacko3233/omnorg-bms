@@ -1,0 +1,302 @@
+{
+  "timestamp": "2025-07-29T21:10:26.342Z",
+  "totalRoutes": 24,
+  "routesByType": {
+    "User": 19,
+    "Admin": 5
+  },
+  "routesByAccess": {
+    "authenticated": 16,
+    "admin": 8
+  },
+  "routes": [
+    {
+      "path": "/api/users",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get all users",
+      "access": "authenticated",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/users/:id",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get user by ID",
+      "access": "authenticated",
+      "tested": true,
+      "status": 404,
+      "error": "Request failed with status code 404"
+    },
+    {
+      "path": "/api/users",
+      "methods": [
+        "POST"
+      ],
+      "type": "User",
+      "description": "Create new user",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/users/:id",
+      "methods": [
+        "PUT"
+      ],
+      "type": "User",
+      "description": "Update user",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/users/:id",
+      "methods": [
+        "DELETE"
+      ],
+      "type": "User",
+      "description": "Delete user",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/admin/settings",
+      "methods": [
+        "GET"
+      ],
+      "type": "Admin",
+      "description": "Get all admin settings",
+      "access": "admin",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/admin/settings/:key",
+      "methods": [
+        "GET"
+      ],
+      "type": "Admin",
+      "description": "Get admin setting by key",
+      "access": "admin",
+      "tested": true,
+      "status": 404,
+      "error": "Request failed with status code 404"
+    },
+    {
+      "path": "/api/admin/settings",
+      "methods": [
+        "POST"
+      ],
+      "type": "Admin",
+      "description": "Create new admin setting",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/admin/settings/:key",
+      "methods": [
+        "PUT"
+      ],
+      "type": "Admin",
+      "description": "Update admin setting",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/admin/settings/:key",
+      "methods": [
+        "DELETE"
+      ],
+      "type": "Admin",
+      "description": "Delete admin setting",
+      "access": "admin",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/clients",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get all clients",
+      "access": "authenticated",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/clients/:id",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get client by ID",
+      "access": "authenticated",
+      "tested": true,
+      "status": 404,
+      "error": "Request failed with status code 404"
+    },
+    {
+      "path": "/api/clients",
+      "methods": [
+        "POST"
+      ],
+      "type": "User",
+      "description": "Create new client",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/clients/:id",
+      "methods": [
+        "PUT"
+      ],
+      "type": "User",
+      "description": "Update client",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/clients/:id",
+      "methods": [
+        "DELETE"
+      ],
+      "type": "User",
+      "description": "Delete client",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/jobs",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get all jobs",
+      "access": "authenticated",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/jobs/:id",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get job by ID",
+      "access": "authenticated",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/jobs",
+      "methods": [
+        "POST"
+      ],
+      "type": "User",
+      "description": "Create new job",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/jobs/:id",
+      "methods": [
+        "PUT"
+      ],
+      "type": "User",
+      "description": "Update job",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/jobs/:id",
+      "methods": [
+        "DELETE"
+      ],
+      "type": "User",
+      "description": "Delete job",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/jobs/:jobId/items",
+      "methods": [
+        "GET"
+      ],
+      "type": "User",
+      "description": "Get job items",
+      "access": "authenticated",
+      "tested": true,
+      "status": 200,
+      "error": null
+    },
+    {
+      "path": "/api/jobs/:jobId/items",
+      "methods": [
+        "POST"
+      ],
+      "type": "User",
+      "description": "Create job item",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/job-items/:id",
+      "methods": [
+        "PUT"
+      ],
+      "type": "User",
+      "description": "Update job item",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    },
+    {
+      "path": "/api/job-items/:id",
+      "methods": [
+        "DELETE"
+      ],
+      "type": "User",
+      "description": "Delete job item",
+      "access": "authenticated",
+      "tested": false,
+      "status": null,
+      "error": null
+    }
+  ]
+}
