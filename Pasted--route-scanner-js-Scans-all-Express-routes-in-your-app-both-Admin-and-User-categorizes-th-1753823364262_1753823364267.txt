@@ -1,0 +1,69 @@
+/*
+  route_scanner.js
+  Scans all Express routes in your app (both Admin and User), categorizes them and outputs a JSON report.
+  Usage: node route_scanner.js
+*/
+
+const fs = require('fs');
+const axios = require('axios');
+
+// Import your Express app (adjust path if needed)
+const app = require('./app');
+
+// Recursively extract routes from an Express router stack
+function extractRoutes(stack, basePath = '') {
+  const routes = [];
+
+  stack.forEach(layer => {
+    // Direct route definition
+    if (layer.route && layer.route.path) {
+      const methods = Object.keys(layer.route.methods).map(m => m.toUpperCase());
+      routes.push({ path: basePath + layer.route.path, methods });
+
+    // Mounted router
+    } else if (layer.name === 'router' && layer.handle.stack) {
+      // Derive the path segment from the regex
+      const segment = layer.regexp.source
+        .replace('^\\', '')
+        .replace('\\/?(?=\\/|$)', '')
+        .replace('(?:\\/)?', '')
+        .replace('\\/', '/');
+
+      const newBase = basePath + (segment === '' ? '' : segment);
+      routes.push(...extractRoutes(layer.handle.stack, newBase));
+    }
+  });
+
+  return routes;
+}
+
+(async () => {
+  try {
+    const routes = extractRoutes(app._router.stack);
+    const report = [];
+
+    for (const route of routes) {
+      // Determine type based on path
+      const type = route.path.includes('/admin') ? 'Admin' : 'User';
+      report.push({ path: route.path, methods: route.methods, type });
+
+      // Optionally, uncomment below to test each endpoint response status
+      /*
+      for (const method of route.methods) {
+        try {
+          const res = await axios({ method: method.toLowerCase(), url: `http://localhost:3000${route.path}` });
+          report[report.length - 1][method] = res.status;
+        } catch (err) {
+          report[report.length - 1][method] = err.response ? err.response.status : 'ERROR';
+        }
+      }
+      */
+    }
+
+    fs.writeFileSync('route_report.json', JSON.stringify(report, null, 2));
+    console.log('✔ Route scan complete. Report saved to route_report.json');
+  } catch (err) {
+    console.error('Error scanning routes:', err);
+    process.exit(1);
+  }
+})();

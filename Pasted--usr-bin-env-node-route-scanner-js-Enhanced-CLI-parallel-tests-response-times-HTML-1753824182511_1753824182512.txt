@@ -1,0 +1,175 @@
+#!/usr/bin/env node
+/*
+  route_scanner.js
+  ✨ Enhanced: CLI, parallel tests, response times, HTML/JSON reports, recommendations, and webhook callbacks
+  Usage: node route_scanner.js [--config config.json] [--output reports/] [--html] [--concurrency 10] [--webhook https://example.com/hook]
+*/
+
+const fs = require('fs');
+const path = require('path');
+const axios = require('axios');
+const { performance } = require('perf_hooks');
+const supertest = require('supertest');
+const chalk = require('chalk');
+const commander = require('commander');
+const ejs = require('ejs');
+
+// Load Express app
+const app = require('./app');
+const request = supertest(app);
+
+// CLI setup
+const program = new commander.Command();
+program
+  .option('-c, --config <path>', 'JSON config file with scan options')
+  .option('-o, --output <dir>', 'Output directory for reports', 'reports')
+  .option('--html', 'Generate an HTML summary report')
+  .option('--concurrency <n>', 'Max parallel requests', parseInt, 5)
+  .option('--webhook <url>', 'POST report JSON to specified webhook URL')
+  .parse(process.argv);
+const options = program.opts();
+
+// Load config if provided
+let config = {};
+if (options.config) {
+  config = JSON.parse(fs.readFileSync(options.config));
+}
+
+// Ensure output directory exists
+if (!fs.existsSync(options.output)) {
+  fs.mkdirSync(options.output, { recursive: true });
+}
+
+// Extract Express routes
+function extractRoutes(stack, basePath = '') {
+  const routes = [];
+  stack.forEach(layer => {
+    if (layer.route && layer.route.path) {
+      const methods = Object.keys(layer.route.methods).map(m => m.toUpperCase());
+      const fullPath = path.join(basePath, layer.route.path).replace(/\\/g, '/');
+      routes.push({ path: fullPath, methods });
+    } else if (layer.name === 'router' && layer.handle.stack) {
+      const mount = layer.regexp.toString()
+        .replace('/^', '')
+        .replace('/i', '')
+        .replace('?(?=\\/|$)/', '')
+        .replace(/\\/g, '/')
+        .replace('^', '')
+        .replace('$/i', '');
+      extractRoutes(layer.handle.stack, basePath + mount)
+        .forEach(r => routes.push(r));
+    }
+  });
+  return routes;
+}
+
+// Analyze results for recommendations
+function analyzeResults(report) {
+  return report.flatMap(entry => entry.results.map(r => {
+    const rec = { path: entry.path, method: r.method };
+    if (r.status >= 500) rec.suggestion = '🔴 Server error: review logs and code.';
+    else if (r.status === 404) rec.suggestion = '⚠️ Missing route: check path or middleware.';
+    else if ([401,403].includes(r.status)) rec.suggestion = '🔐 Auth issue: verify tokens/permissions.';
+    else if (r.status >= 200 && r.status < 300) {
+      rec.suggestion = r.time > 500
+        ? '⏱️ Slow response: consider caching or optimizing.'
+        : '✅ Success: add edge-case and validation tests.';
+    } else rec.suggestion = '❓ Unexpected status: inspect implementation.';
+    return rec;
+  }));
+}
+
+// Run tests in parallel with concurrency
+async function runTests(routes) {
+  const results = [];
+  const queue = [...routes];
+  const workers = Array(options.concurrency).fill().map(async () => {
+    while (queue.length) {
+      const { path, methods } = queue.shift();
+      const entry = { path, results: [] };
+      for (const method of methods) {
+        const start = performance.now();
+        let status;
+        try {
+          const res = await request[method.toLowerCase()](path)
+            .set('Authorization', process.env.AUTH_TOKEN || '');
+          status = res.status;
+        } catch (err) {
+          status = err.status || 0;
+        }
+        const time = Math.round(performance.now() - start);
+        entry.results.push({ method, status, time });
+        const color = status >= 500 ? 'red' : status === 404 ? 'yellow' : status < 300 ? 'green' : 'blue';
+        console.log(`${chalk.bold(method)} ${path} → ${chalk[color](status)} in ${time}ms`);
+      }
+      results.push(entry);
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
+
+// Send JSON payload to webhook
+async function sendWebhook(url, payload) {
+  try {
+    await axios.post(url, payload, { headers: { 'Content-Type': 'application/json' } });
+    console.log(chalk.blue(`↗️ Report posted to webhook: ${url}`));
+  } catch (err) {
+    console.error(chalk.red(`❌ Failed to POST to webhook: ${err.message}`));
+  }
+}
+
+(async () => {
+  try {
+    console.log(chalk.cyan('🔍 Extracting routes…'));
+    const routes = extractRoutes(app._router.stack);
+
+    console.log(chalk.cyan(`🧪 Testing ${routes.length} endpoints (concurrency: ${options.concurrency})…`));
+    const report = await runTests(routes);
+
+    // Save JSON report
+    const jsonPath = path.join(options.output, 'route_report.json');
+    fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+    console.log(chalk.green(`✔ JSON report: ${jsonPath}`));
+
+    // Save recommendations
+    const recs = analyzeResults(report);
+    const recPath = path.join(options.output, 'route_recommendations.json');
+    fs.writeFileSync(recPath, JSON.stringify(recs, null, 2));
+    console.log(chalk.green(`✔ Recommendations: ${recPath}`));
+
+    // Optional HTML
+    if (options.html) {
+      const template = fs.readFileSync(path.join(__dirname, 'templates', 'report.ejs'), 'utf-8');
+      const html = ejs.render(template, { report, recs, generated: new Date() });
+      const htmlPath = path.join(options.output, 'report.html');
+      fs.writeFileSync(htmlPath, html);
+      console.log(chalk.green(`✔ HTML report: ${htmlPath}`));
+    }
+
+    // Webhook callback
+    if (options.webhook) {
+      await sendWebhook(options.webhook, { report, recommendations: recs });
+    }
+
+  } catch (err) {
+    console.error(chalk.red('❌ Error:'), err);
+    process.exit(1);
+  }
+})();
+
+// ---------- Sample Webhook Receiver ----------
+// Save as webhook_server.js
+//
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const app = express();
+// app.use(bodyParser.json());
+//
+// app.post('/hooks/routes', (req, res) => {
+//   console.log('Received route report:', JSON.stringify(req.body, null, 2));
+//   // TODO: store in DB, trigger alerts, or serve via dashboard
+//   res.status(200).send('Webhook received');
+// });
+//
+// app.listen(4000, () => console.log('Webhook server listening on port 4000'));
